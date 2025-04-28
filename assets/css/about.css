@@ -295,7 +295,7 @@ body {
 .team-title {
   font-size: clamp(28px, 5vw, 40px);
   margin-bottom: clamp(30px, 5vw, 60px);
-  color: #215540;
+  color: #000;
   text-align: center;
   width: 100%;
   max-width: 1440px;
