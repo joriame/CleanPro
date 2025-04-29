@@ -184,250 +184,362 @@ body {
     font-size: 16px;
   }
 }
-
-/* Основной блок авторизации */
-.auth {
+/* Стилизация корзины */
+.basket-section {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px;
+  box-sizing: border-box;
+  background: #F3F4F6;
+}
+.section-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+  max-width: 1440px;
+}
+.basket-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  width: 100%;
+}
+.basket-items {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: start;
+  gap: 43px;
+  margin-right: 30px;
+}
+.basket-item {
+  display: flex;
+  align-items: center;
+  max-width: 825px;
+  width: 100%;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: 1px solid #bdbdbd;
+  padding: 30px;
+  max-height: 180px;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.basket-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.basket-img {
+  margin-right: 10px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 100%;
+}
+.item-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.item-desc {
+  font-size: 17px;
+  font-weight: 100;
+  color: #4b5563;
+  margin-bottom: 29px;
+}
+.item-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btns {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background-color: #f8f9fa;
-  padding: 20px;
+  gap: 13px;
 }
-
-.form-block {
-  background-color: #ffffff;
-  border-radius: 20px;
-  width: 100%;
-  max-width: 850px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.form-block::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 145px;
-  background: #388473;
-  z-index: 1;
-}
-
-.form-title {
-  font-size: clamp(28px, 4vw, 40px);
-  color: #fff;
-  text-align: center;
-  padding-top: 40px;
-  position: relative;
-  z-index: 2;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-.not-acc {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  font-size: clamp(16px, 2vw, 24px);
-  color: #fff;
-}
-.not-acc a {
-  color: #fff;
-  text-decoration: none;
-}
-.not-acc a:hover {
-  text-decoration: underline;
-}
-
-.auth-form {
+.btns button {
   display: flex;
-  flex-direction: column;
-  gap: 43px;
-  padding: 85px 36px 50px;
-  position: relative;
-  z-index: 2;
-}
-
-.form-label {
-  display: flex;
-  flex-direction: column;
-  gap: 17px;
-  width: 100%;
-  font-size: clamp(18px, 2.5vw, 40px);
-  font-weight: 500;
-}
-
-.form-input {
-  width: 100%;
-  background: #e6e6e6;
-  color: #333;
-  height: 80px;
-  font-size: clamp(16px, 2vw, 24px);
-  padding: 0 20px;
-  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 5px;
   outline: none;
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid #bdbdbd;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
-
-.password {
-  margin-bottom: 70px;
+.btns button:hover {
+  background-color: #f0f0f0;
+  border-color: #215540;
 }
-
-.form-input::placeholder {
+.count {
+  font-size: 20px;
+  font-weight: 100;
+}
+.trash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.trash img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.trash img:hover {
+  transform: scale(1.1);
+}
+.trash p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.total-price {
+  max-width: 470px;
+  width: 100%;
+  max-height: 400px;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: 1px solid #bdbdbd;
+  padding: 30px 28px;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.total-price:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.total-price-container {
+  width: 100%;
+  height: max-content;
+}
+.total-price-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 31px;
+}
+.sum {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.sum-text {
+  font-size: 20px;
+  font-weight: 100;
   color: #595959;
-  font-size: clamp(16px, 3vw, 24px);
 }
-
-.checkbox-forgot-pass {
+.total-sum {
+  font-size: 20px;
+  font-weight: 100;
+  color: #595959;
+}
+.sale {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.sale-text {
+  font-size: 20px;
+  font-weight: 100;
+  color: #595959;
+}
+.total-sale {
+  font-size: 20px;
+  font-weight: 100;
+  color: #595959;
+}
+.total-line {
+  width: 100%;
+  height: 1px;
+  background-color: #595959;
+  margin-bottom: 18px;
+}
+.buy {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  width: 100%;
+  margin-bottom: 31px;
 }
-
-.checkbox-label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: clamp(16px, 2vw, 24px);
-  color: #555;
-  cursor: pointer;
+.buy-text {
+  font-size: 25px;
+  font-weight: bold;
 }
-
-.checkbox-input {
-  width: 22px;
-  height: 22px;
-  accent-color: #388473;
-  cursor: pointer;
+.total-buy {
+  font-size: 25px;
+  font-weight: bold;
 }
-
-.forgot-pass {
-  font-size: clamp(16px, 2vw, 24px);
-  color: #0050ff;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.forgot-pass:hover {
-  color: #0033cc;
-  text-decoration: underline;
-}
-
-.auth-btn {
-  width: 100%;
-  height: 80px;
+.order-action {
   background: #215540;
+  width: 100%;
+  height: 50px;
   color: #fff;
-  font-size: clamp(18px, 2.5vw, 24px);
+  outline: none;
   border: none;
-  border-radius: 30px;
+  border-radius: 10px;
+  font-size: 30px;
+  font-family: "Segoe UI", sans-serif;
   cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 600;
-  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
-.auth-btn:hover {
-  background: #1a4535;
+.order-action:hover {
+  background-color: #1a4535;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(33, 85, 64, 0.3);
 }
 
-.auth-btn:active {
-  transform: translateY(0);
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .basket-container {
+      flex-direction: column;
+      gap: 40px;
+  }
+  .basket-items {
+      width: 100%;
+      margin-right: 0;
+  }
+  .basket-item {
+      max-width: 100%;
+  }
+  .total-price {
+      max-width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
-  .auth-form {
-    padding: 70px 25px 40px;
-    gap: 35px;
+  .section-title {
+      font-size: 28px;
+      margin-bottom: 15px;
   }
-
-  .form-block::before {
-    height: 120px;
+  .basket-items {
+      align-items: center;
   }
-
-  .form-title {
-    padding-top: 30px;
+  .basket-item {
+      flex-direction: row;
+      align-items: flex-start;
+      max-height: none;
+      padding: 10px;
   }
-
-  .password {
-    margin-bottom: 50px;
+  .basket-img {
+      width: 80px;
+      height: 80px;
+      margin-right: 15px;
+      margin-bottom: 0;
   }
-
-  .form-input::placeholder {
-    font-size: clamp(14px, 3.5vw, 18px);
+  .item-info {
+      width: calc(100% - 95px);
   }
-}
-
-@media (max-width: 480px) {
-  .auth {
-    padding: 15px;
+  .item-title {
+      font-size: 16px;
+      margin-bottom: 5px;
+      font-weight: 600;
   }
-
-  .auth-form {
-    padding: 60px 20px 35px;
-    gap: 30px;
+  .item-desc {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #666;
   }
-
-  .form-block::before {
-    height: 100px;
+  .item-bottom {
+      flex-direction: row;
+      width: 100%;
   }
-
-  .form-title {
-    padding-top: 25px;
+  .btns {
+      gap: 10px;
   }
-
-  .form-label {
-    gap: 12px;
+  .count {
+      font-size: 16px;
   }
-
-  .form-input {
-    height: 65px;
+  .trash {
+      gap: 20px;
   }
-
-  .password {
-    margin-bottom: 10px;
+  .trash p {
+      font-size: 16px;
+      font-weight: 600;
   }
-
-  .checkbox-forgot-pass {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  .total-price {
+      max-width: 100%;
+      padding: 20px;
   }
-
-  .auth-btn {
-    height: 70px;
+  .total-price-title {
+      font-size: 20px;
+      margin-bottom: 15px;
   }
-  .checkbox-label {
-    display: none;
+  .sum-text,
+  .sale-text,
+  .total-sum,
+  .total-sale {
+      font-size: 14px;
   }
-
-  .form-input::placeholder {
-    font-size: clamp(12px, 4vw, 16px);
+  .buy {
+      margin-bottom: 20px;
+      gap: 5px;
   }
-}
-
-@media (max-width: 360px) {
-  .auth-form {
-    padding: 50px 15px 30px;
-    gap: 25px;
+  .buy-text,
+  .total-buy {
+      font-size: 18px;
   }
-
-  .form-input {
-    height: 60px;
-  }
-
-  .auth-btn {
-    height: 65px;
+  .order-action {
+      font-size: 16px;
+      height: 44px;
+      padding: 0 15px;
   }
 }
 
+@media (max-width: 400px) {
+  .item-title {
+      font-size: 15px;
+  }
+  .item-desc {
+      font-size: 12px;
+  }
+  .btns button {
+      width: 18px;
+      height: 18px;
+  }
+  .count {
+      font-size: 12px;
+  }
+  .btns button img {
+      width: 50%;
+  }
+  .trash p {
+      font-size: 14px;
+  }
+}
+
+@media (hover: none) {
+  .basket-item:hover {
+      transform: none;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  }
+  .order-action:hover {
+      transform: none;
+      background-color: #215540;
+  }
+  .total-price:hover {
+      transform: none;
+      box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .btns button:hover {
+      background-color: #fff;
+      border-color: #bdbdbd;
+  }
+  .trash img:hover {
+      transform: none;
+  }
+}
 /* Стилизация подвала */
 .footer {
   display: flex;
