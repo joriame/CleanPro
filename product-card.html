@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CleanPro</title>
-  <link rel="stylesheet" href="assets/css/catalog.css">
+  <link rel="stylesheet" href="assets/css/product-card.css">
 </head>
 
 <body>
@@ -76,126 +76,80 @@
     </div>
   </div>
 
-
-
-  <!-- Услуги -->
-  <section class="services">
-    <h2 class="services-title">Наши услуги</h2>
-    <div class="services-container">
-      <div class="service-card" onclick="window.location.href='product-card.html'">
-        <img src="assets/img/general-clean.png" alt="service1" class="card-img">
-        <div class="card-text">
-          <h3 class="item-title">Генеральная уборка квартиры</h3>
-          <p class="item-desc">Комплексная уборка всех помещений,
-            включая мытье окон и чистку мебели</p>
-          <div class="price-price-btn">
-            <p class="price">4000 ₽</p>
-            <button class="price-btn"><img src="assets/icons/ic_round-plus.svg" alt="">В корзину</button>
+  <!-- Карточка товара -->
+  <section class="product-card">
+    <h1 class="product-card-title">Генеральная уборка квартиры</h1>
+    <div class="product-card-container">
+      <div class="img-choice">
+        <div class="img-block">
+          <div class="second-img">
+            <img src="assets/img/img1.png" alt="img1">
+            <img src="assets/img/img2.png" alt="">
+            <img src="assets/img/img3.png" alt="">
+          </div>
+          <img src="assets/img/main-img.png" alt="" class="main-img">
+        </div>
+        <div class="total-price">
+          <div class="total-price-container">
+            <h3 class="total-price-title">Стоимость</h3>
+            <div class="sum">
+              <p class="sum-text">Сумма</p>
+              <p class="total-sum">7000 ₽</p>
+            </div>
+            <div class="sale">
+              <p class="sale-text">Скидка</p>
+              <p class="total-sale">0 ₽</p>
+            </div>
+            <div class="total-line"></div>
+            <div class="buy">
+              <p class="buy-text">Цена</p>
+              <p class="total-buy">7000 ₽</p>
+            </div>
+            <button class="order-action" type="button">Добавить услугу в корзину</button>
           </div>
         </div>
       </div>
 
-      <div class="service-card" onclick="window.location.href='product-card.html'">
-        <img src="assets/img/card2.png" alt="service1" class="card-img">
-        <div class="card-text">
-          <h3 class="item-title">Поддерживающая уборка</h3>
-          <p class="item-desc">Регулярная уборка: протирка пыли, влажная уборка, дезинфекция, вынос мусора, чистка кухни
-            и санузлов.</p>
-          <div class="price-price-btn">
-            <p class="price">2000 ₽</p>
-            <button class="price-btn"><img src="assets/icons/ic_round-plus.svg" alt="">В корзину</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-card" onclick="window.location.href='product-card.html'">
-        <img src="assets/img/card3.png" alt="service1" class="card-img">
-        <div class="card-text">
-          <h3 class="item-title">Мытье окон</h3>
-          <p class="item-desc">Мойка окон с двух сторон, чистка рам, подоконников, удаление разводов, налёта, безопасные
-            средства.</p>
-          <div class="price-price-btn">
-            <p class="price">1500 ₽</p>
-            <button class="price-btn"><img src="assets/icons/ic_round-plus.svg" alt="">В корзину</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-card" onclick="window.location.href='product-card.html'">
-        <img src="assets/img/card4.png" alt="service1" class="card-img">
-        <div class="card-text">
-          <h3 class="item-title">Уборка после ремонта</h3>
-          <p class="item-desc">Удаление строительной пыли, очистка стен, полов, потолков, мойка окон, вынос мусора.</p>
-          <div class="price-price-btn">
-            <p class="price">5000 ₽</p>
-            <button class="price-btn"><img src="assets/icons/ic_round-plus.svg" alt="">В корзину</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-card" onclick="window.location.href='product-card.html'">
-        <img src="assets/img/card5.png" alt="service1" class="card-img">
-        <div class="card-text">
-          <h3 class="item-title">Химчистка мебели</h3>
-          <p class="item-desc">Глубокая чистка мебели, удаление пятен, пыли, безопасные средства, паровая обработка,
-            восстановление цвета.</p>
-          <div class="price-price-btn">
-            <p class="price">3000 ₽</p>
-            <button class="price-btn"><img src="assets/icons/ic_round-plus.svg" alt="">В корзину</button>
-          </div>
-        </div>
-      </div>
-      <div class="service-card" onclick="window.location.href='product-card.html'">
-        <img src="assets/img/card6.png" alt="service1" class="card-img">
-        <div class="card-text">
-          <h3 class="item-title">Уборка офиса</h3>
-          <p class="item-desc">Комплексная уборка всех помещений,
-            включая мытье окон и чистку мебели</p>
-          <div class="price-price-btn">
-            <p class="price">3000 ₽</p>
-            <button class="price-btn"><img src="assets/icons/ic_round-plus.svg" alt="">В корзину</button>
-          </div>
-        </div>
-      </div>
-      <div class="service-card" onclick="window.location.href='product-card.html'">
-        <img src="assets/img/card7.png" alt="service1" class="card-img">
-        <div class="card-text">
-          <h3 class="item-title">Дезинфекция помещений</h3>
-          <p class="item-desc">Обеззараживание поверхностей, уничтожение вирусов, бактерий, грибков, защита от инфекций.
+      <div class="product-info">
+        <div class="info-top">
+          <p class="info-title active-title">
+            Описание
           </p>
-          <div class="price-price-btn">
-            <p class="price">150 ₽/м²</p>
-            <button class="price-btn"><img src="assets/icons/ic_round-plus.svg" alt="">В корзину</button>
-          </div>
+          <p class="info-title 
+          inactive">
+            Команда
+          </p>
+          <p class="info-title 
+          inactive">
+            Отзывы
+          </p>
         </div>
-      </div>
+        <div class="info-body">
+          <p class="info-desc">
+            Генеральная уборка – это комплексное очищение вашего жилья от загрязнений любого уровня. Мы тщательно моем
+            окна, чистим полы, стены, мебель, осветительные приборы и даже труднодоступные места. Наша команда
+            профессионалов использует безопасные и эффективные моющие средства, которые справляются с пятнами, пылью и
+            жировыми отложениями.
+          <p class="info-desc">
+            Вы получите идеально чистую квартиру, где каждая деталь будет сиять, а воздух станет свежим. Подходит для
+            подготовки квартиры к важным событиям, после ремонта или просто для обновления пространства.
+          </p>
 
-      <div class="service-card" onclick="window.location.href='product-card.html'">
-        <img src="assets/img/card8.png" alt="service1" class="card-img">
-        <div class="card-text">
-          <h3 class="item-title">Уборка после мероприятий</h3>
-          <p class="item-desc">Сбор и вынос мусора, чистка полов, мебели, столов, дезинфекция, устранение запахов,.</p>
-          <div class="price-price-btn">
-            <p class="price">100 ₽/м²</p>
-            <button class="price-btn"><img src="assets/icons/ic_round-plus.svg" alt="">В корзину</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-card" onclick="window.location.href='product-card.html'">
-        <img src="assets/img/card9.png" alt="service1" class="card-img">
-        <div class="card-text">
-          <h3 class="item-title">Чистка автомобилей</h3>
-          <p class="item-desc">Уборка салона, химчистка сидений, ковриков, полировка пластика, удаление пыли, пятен.</p>
-          <div class="price-price-btn">
-            <p class="price">100 ₽/м²</p>
-            <button class="price-btn"><img src="assets/icons/ic_round-plus.svg" alt="">В корзину</button>
-          </div>
+          </p>
+          <ul>
+            Почему выбирают нас?
+            <li>Опытные специалисты.</li>
+            <li>Современное оборудование.</li>
+            <li>Индивидуальный подход к каждому клиенту.</li>
+          </ul>
+          <p class="info-desc">
+            С нами уборка станет не заботой, а приятным результатом. Закажите генеральную уборку прямо сейчас!
+          </p>
         </div>
       </div>
     </div>
-
   </section>
+
 
 
 

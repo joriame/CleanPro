@@ -180,10 +180,11 @@ body {
   .mobile-icons {
     gap: 20px;
   }
-  .mobile-icon-link {
-    font-size: 16px;
+  .mobile-icon-link span {
+    font-size: 18px;
   }
 }
+
 
 /* Основной блок авторизации */
 .auth {
