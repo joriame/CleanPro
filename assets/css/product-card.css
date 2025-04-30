@@ -223,15 +223,16 @@ body {
 }
 .img-block {
   display: flex;
-  justify-content: space-between;
+  justify-content:center;
   align-items: center;
-  max-width: 825px;
+  max-width: 625px;
+  max-height: 625px;
   width: 100%;
   border: 1px solid #bdbdbd;
   border-radius: 10px;
-  padding: 66px 55px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   max-height: 530px;
+  padding: 20px;
   background: #fff;
   transition: all 0.3s ease;
 }
@@ -240,37 +241,11 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
-
-.second-img {
-  display: flex;
-  flex-direction: column;
-  gap: 45px;
-  margin-right: 20px;
-}
-
-.second-img img {
-  max-width: 100px;
-  height: auto;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 5px;
-  border: 2px solid transparent;
-}
-
-.second-img img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
 .main-img {
-  max-width: 500px;
+  width: 500px;
+  height: 500px;
   height: auto;
   border-radius: 5px;
-  transition: transform 0.3s ease;
-}
-
-.main-img:hover {
-  transform: scale(1.02);
 }
 
 .total-price {
@@ -471,7 +446,6 @@ body {
   margin-left: 50px;
 }
 
-/* Твой адаптив для картинок */
 @media (max-width: 1200px) {
   .product-card-container {
     flex-direction: column;
@@ -487,15 +461,6 @@ body {
     gap: 40px;
   }
   .main-img {
-    max-width: 100%;
-    width: 100%;
-  }
-  .second-img {
-    flex-direction: row;
-    margin-right: 0;
-    width: 100%;
-  }
-  .second-img img {
     max-width: 100%;
     width: 100%;
   }
@@ -587,9 +552,6 @@ body {
 @media (max-width: 480px) {
   .img-block {
     padding: 20px;
-  }
-  .second-img img {
-    width: 20%;
   }
   .product-card {
     padding: 15px 20px;
